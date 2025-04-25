@@ -93,7 +93,7 @@ export async function login(state, formData) {
     }
   }
 
-  await createSession(user.id)
+  await createSession(user.id, user.role)
   redirect("/profile")
 
   // User authenticated successfully
